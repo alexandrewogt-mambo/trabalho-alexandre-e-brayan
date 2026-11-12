@@ -1,0 +1,219 @@
+:root {
+    --primary: #111111;
+    --secondary: #333333;
+    --accent: #c59d5f;
+    --bg-light: #f4f5f7;
+    --white: #ffffff;
+    --danger: #d9534f;
+    --danger-bg: #fdecea;
+    --success: #28a745;
+    --border: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--secondary);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Container e Cards */
+.container {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Formulários */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+/* Tabelas Responsivas (RNF03) */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: #f8f9fa;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+/* Alerta de Estoque Mínimo (RN01) */
+tr.estoque-baixo {
+    background-color: var(--danger-bg);
+    color: #a94442;
+    font-weight: 600;
+}
+
+.badge-alerta {
+    background-color: var(--danger);
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-left: 5px;
+}
+
+/* Tela de Login */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary);
+}
+
+.login-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+.login-box h1 {
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.login-box p {
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.alert-danger { background: var(--danger-bg); color: var(--danger); }
+.alert-success { background: #d4edda; color: #155724; }
